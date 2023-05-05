@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">PetDay</string>
+    <string name="tengo_una_mascota">Tengo una mascota</string>
+    <string name="yo_ofrezco_servicios_para_mascotas">Yo ofrezco servicios para Mascotas</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Correo electrónico</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="iniciar_sesion">Inicie sesión</string>
+    <string name="entrar">Entrar</string>
+    <string name="opciones_de_inicio">O continuar con</string>
+    <string name="twitter">Twitter</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="crear_cuenta">Si no tienes cuentas crea una aquí</string>
+</resources>
