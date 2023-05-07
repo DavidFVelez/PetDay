@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/inicioCuidadorFragment">
+    <fragment
+        android:id="@+id/momentosFragment"
+        android:name="com.davidvelez.petday.iu.fragments.MomentosFragment"
+        android:label="fragment_momentos"
+        tools:layout="@layout/fragment_momentos" >
+        <action
+            android:id="@+id/action_momentosFragment_to_perfilCuidadorFragment"
+            app:destination="@id/perfilCuidadorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trabajosFragment"
+        android:name="com.davidvelez.petday.iu.fragments.TrabajosFragment"
+        android:label="fragment_trabajos"
+        tools:layout="@layout/fragment_trabajos" >
+        <action
+            android:id="@+id/action_trabajosFragment_to_perfilCuidadorFragment"
+            app:destination="@id/perfilCuidadorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/perfilCuidadorFragment"
+        android:name="com.davidvelez.petday.iu.fragments.PerfilCuidadorFragment"
+        android:label="fragment_perfil_cuidador"
+        tools:layout="@layout/fragment_perfil_cuidador" />
+    <fragment
+        android:id="@+id/inicioCuidadorFragment"
+        android:name="com.davidvelez.petday.iu.fragments.InicioCuidadorFragment"
+        android:label="fragment_inicio_cuidador"
+        tools:layout="@layout/fragment_inicio_cuidador" >
+        <action
+            android:id="@+id/action_inicioCuidadorFragment_to_trabajosFragment"
+            app:destination="@id/trabajosFragment" />
+    </fragment>
+</navigation>
