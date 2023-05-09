@@ -12,25 +12,33 @@
         android:theme="@style/Theme.PetDay"
         tools:targetApi="31">
         <activity
+            android:name=".iu.bottomnavigation.BottomNavDuenoActivity"
+            android:exported="true"
+            android:label="@string/title_activity_bottom_nav_dueno" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".iu.splash.SplashActivity"
             android:exported="true"
             android:theme="@style/NoActionBar">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".iu.bottomnavigation.BottomNavigationActivity"
             android:exported="true"
-            android:label="@string/title_activity_bottom_navigation">
-
-        </activity>
+            android:label="@string/title_activity_bottom_navigation" />
         <activity
             android:name=".iu.useroptions.UserOptionsActivity"
-            android:theme="@style/NoActionBar"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".iu.main.MainActivity"
             android:exported="true" />

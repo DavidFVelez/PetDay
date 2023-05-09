@@ -36,4 +36,6 @@
     <string name="perfil_cuidador">Perfil</string>
     <string name="inicio_cuidador_fragment">Inicio</string>
     <string name="texto_logo_petday">PetDay</string>
+    <string name="title_activity_bottom_nav_dueno">BottomNavDuenoActivity</string>
+    <string name="mascotas_fragment_texto">Mascotas</string>
 </resources>

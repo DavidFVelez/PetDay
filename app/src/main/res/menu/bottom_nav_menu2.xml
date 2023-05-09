@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
-        android:id="@+id/inicioCuidadorFragment"
+        android:id="@+id/inicioDuenoFragment"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/inicio_cuidador_fragment" />
 
 
     <item
-        android:id="@+id/momentosFragment"
+        android:id="@+id/momentosDuenoFragment"
         android:icon="@drawable/ic_momento"
         android:title="@string/momentos_cuidador" />
 
     <item
-        android:id="@+id/trabajosFragment"
-        android:icon="@drawable/ic_trabajos"
-        android:title="@string/trabajos_cuidador" />
+        android:id="@+id/mascotasDuenoFragment"
+        android:icon="@drawable/ic_mascotas"
+        android:title="@string/mascotas_fragment_texto" />
 
     <item
-        android:id="@+id/perfilCuidadorFragment"
+        android:id="@+id/perfilDuenoFragment"
         android:icon="@drawable/ic_usuario"
         android:title="@string/perfil_cuidador" />
-
 </menu>

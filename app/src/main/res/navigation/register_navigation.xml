@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/carerLoginFragment"
         android:name="com.davidvelez.petday.iu.login.CarerLoginFragment"
-        android:label="fragment_carer_login"
+        android:label="INICIO DE SESIÓN"
         tools:layout="@layout/fragment_carer_login" >
         <action
             android:id="@+id/action_carerLoginFragment_to_carerRegisterFragment"
@@ -17,6 +17,6 @@
     <fragment
         android:id="@+id/carerRegisterFragment"
         android:name="com.davidvelez.petday.iu.register.CarerRegisterFragment"
-        android:label="fragment_carer_register"
+        android:label="REGISTRO"
         tools:layout="@layout/fragment_carer_register" />
 </navigation>

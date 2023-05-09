@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/momentosFragment"
         android:name="com.davidvelez.petday.iu.fragments.MomentosFragment"
-        android:label="fragment_momentos"
+        android:label="Momentos"
         tools:layout="@layout/fragment_momentos" >
         <action
             android:id="@+id/action_momentosFragment_to_perfilCuidadorFragment"
@@ -16,7 +16,7 @@
     <fragment
         android:id="@+id/trabajosFragment"
         android:name="com.davidvelez.petday.iu.fragments.TrabajosFragment"
-        android:label="fragment_trabajos"
+        android:label="Trabajos"
         tools:layout="@layout/fragment_trabajos" >
         <action
             android:id="@+id/action_trabajosFragment_to_perfilCuidadorFragment"
