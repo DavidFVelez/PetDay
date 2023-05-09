@@ -17,19 +17,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/iniciar_sesion"
-        android:textAlignment="textStart"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:textStyle="bold"
         android:background="#8333E5"
+        android:textAlignment="center"
         android:textColor="@color/white"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/correo_text_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp">
+        android:layout_marginTop="50dp"
+        app:startIconDrawable="@drawable/ic_email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/correo_edit_text"
@@ -41,10 +44,13 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/contraseña_text_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="48dp">
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="48dp"
+        app:startIconDrawable="@drawable/baseline_password_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/contraseña_edit_text"
@@ -58,12 +64,12 @@
 
     <Button
         android:id="@+id/entrar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="48dp"
         android:enabled="false"
         android:textColor="@color/white"
         android:backgroundTint="#8333E5"
@@ -78,7 +84,7 @@
         android:id="@+id/continua_con"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:textStyle="bold"
         android:text="@string/opciones_de_inicio"
         tools:layout_editor_absoluteX="16dp"
@@ -144,7 +150,8 @@
         android:id="@+id/sino_hay_cuenta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         android:text="@string/crear_cuenta"
         tools:layout_editor_absoluteX="16dp"

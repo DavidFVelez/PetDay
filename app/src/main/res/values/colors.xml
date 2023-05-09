@@ -7,4 +7,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="fondo_petday">#8333E5</color>
+    <color name="color_boton_opciones">#343F4B</color>
 </resources>

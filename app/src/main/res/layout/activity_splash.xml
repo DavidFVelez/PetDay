@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".iu.splash.SplashActivity">
+
+    <TextView
+        android:id="@+id/logo_petday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chewy_regular"
+        android:text="@string/texto_logo_petday"
+        android:layout_marginTop="200dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="75sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/huella" />
+
+
+</LinearLayout>

@@ -17,7 +17,7 @@
     <string name="twitter">Twitter</string>
     <string name="facebook">Facebook</string>
     <string name="google">Google</string>
-    <string name="crear_cuenta">Si no tienes cuentas crea una aquí</string>
+    <string name="crear_cuenta">Si no tienes cuentas crea una Aquí</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="titulo_fragment_register">Registro</string>
@@ -35,4 +35,5 @@
     <string name="trabajos_cuidador">Trabajos</string>
     <string name="perfil_cuidador">Perfil</string>
     <string name="inicio_cuidador_fragment">Inicio</string>
+    <string name="texto_logo_petday">PetDay</string>
 </resources>

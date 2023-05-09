@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_navigation.xml"
+    app:startDestination="@id/carerLoginFragment">
+
+    <fragment
+        android:id="@+id/carerLoginFragment"
+        android:name="com.davidvelez.petday.iu.login.CarerLoginFragment"
+        android:label="fragment_carer_login"
+        tools:layout="@layout/fragment_carer_login" >
+        <action
+            android:id="@+id/action_carerLoginFragment_to_carerRegisterFragment"
+            app:destination="@id/carerRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carerRegisterFragment"
+        android:name="com.davidvelez.petday.iu.register.CarerRegisterFragment"
+        android:label="fragment_carer_register"
+        tools:layout="@layout/fragment_carer_register" />
+</navigation>
