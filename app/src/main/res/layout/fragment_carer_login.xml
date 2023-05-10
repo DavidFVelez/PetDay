@@ -38,7 +38,8 @@
             android:id="@+id/correo_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/prompt_email" />
+            android:hint="@string/prompt_email"
+            android:inputType="textEmailAddress" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -50,12 +51,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:layout_marginBottom="48dp"
+        app:endIconMode="password_toggle"
         app:startIconDrawable="@drawable/baseline_password_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/contraseña_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
             android:hint="@string/prompt_password"
 
             />
@@ -70,7 +73,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="48dp"
-        android:enabled="false"
+        android:enabled="true"
         android:textColor="@color/white"
         android:backgroundTint="#8333E5"
         android:text="@string/entrar"
@@ -100,7 +103,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
-        android:enabled="false"
+        android:enabled="true"
         android:backgroundTint="#8333E5"
         android:textColor="@color/white"
         android:text="@string/facebook"
@@ -118,7 +121,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
-        android:enabled="false"
+        android:enabled="true"
         android:backgroundTint="#8333E5"
         android:textColor="@color/white"
         android:text="@string/twitter"
@@ -136,7 +139,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="48dp"
-        android:enabled="false"
+        android:enabled="true"
         android:backgroundTint="#8333E5"
         android:textColor="@color/white"
         android:text="@string/google"

@@ -24,8 +24,8 @@
     <string name="correo_fragment_registro">Correo</string>
     <string name="nombre_de_usuario_fragment_resgistro">Nombre de usuario</string>
     <string name="telefono_fragment_registro">Teléfono</string>
-    <string name="contrasena_fragment_registro">Contrasena</string>
-    <string name="repetir_contrasena_fragment_registro">Repetir contrasena</string>
+    <string name="contrasena_fragment_registro">Contraseña</string>
+    <string name="repetir_contrasena_fragment_registro">Repetir contraseña</string>
     <string name="boton_registro_fragment_registro">Registrarse</string>
     <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
     <string name="title_home">Home</string>

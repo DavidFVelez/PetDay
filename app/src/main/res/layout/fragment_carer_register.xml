@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -44,6 +48,7 @@
             android:id="@+id/correo_register_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
             android:hint="@string/correo_fragment_registro" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -59,6 +64,7 @@
             android:id="@+id/nombre_usuario_register_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="text"
             android:hint="@string/nombre_de_usuario_fragment_resgistro" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,6 +80,7 @@
             android:id="@+id/telefono_usuario_register_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="phone"
             android:hint="@string/telefono_fragment_registro" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,13 +90,15 @@
         app:startIconDrawable="@drawable/baseline_password_24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:endIconMode="password_toggle"
         android:layout_margin="8dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/contrasenha_usuario_register_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/contrasena_fragment_registro" />
+            android:hint="@string/contrasena_fragment_registro"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -98,12 +107,14 @@
         app:startIconDrawable="@drawable/baseline_password_24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:endIconMode="password_toggle"
         android:layout_margin="8dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/repetir_contrasenha_usuario_register_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
             android:hint="@string/repetir_contrasena_fragment_registro" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -120,3 +131,4 @@
         android:text="@string/boton_registro_fragment_registro" />
 
 </LinearLayout>
+</ScrollView>
