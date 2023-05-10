@@ -1,42 +1,82 @@
 package com.davidvelez.petday.iu.register
 
-import android.content.Intent
+import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.Toast
+import androidx.lifecycle.Observer
+import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.davidvelez.petday.R
 import com.davidvelez.petday.databinding.FragmentCarerRegisterBinding
-import com.davidvelez.petday.iu.bottomnavigation.BottomNavigationActivity
-import com.davidvelez.petday.iu.login.CarerLoginFragmentDirections
-import com.davidvelez.petday.iu.main.MainActivity
-
 
 class CarerRegisterFragment : Fragment() {
 
-   private lateinit var carerRegisterBinding: FragmentCarerRegisterBinding
+    companion object {
+        fun newInstance() = CarerRegisterFragment()
+    }
+
+    private lateinit var carerRegisterBinding: FragmentCarerRegisterBinding
+    private lateinit var carerRegisterViewModel: CarerRegisterViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        carerRegisterBinding=FragmentCarerRegisterBinding.inflate(inflater,container,false)
-        val view = carerRegisterBinding.root
+        carerRegisterBinding = FragmentCarerRegisterBinding.inflate(inflater, container, false)
+        return carerRegisterBinding.root
+//        return inflater.inflate(R.layout.fragment_carer_register, container, false)
+    }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        carerRegisterViewModel = ViewModelProvider(this).get(CarerRegisterViewModel::class.java)
+        // TODO: Use the ViewModel
 
-        carerRegisterBinding.botonRegistrarseFragmentRegistro.setOnClickListener {
-            val registrar = Intent(activity, BottomNavigationActivity::class.java)
-            startActivity(registrar)
+        val valPassword = Observer<String> { vPassword ->
+            carerRegisterBinding.contrasenhaUsuarioRegisterTextInputLayout.error = vPassword
+        }
+        carerRegisterViewModel.vPassword.observe(viewLifecycleOwner, valPassword)
+
+        val valRepPassword = Observer<String> { vRPassword ->
+            carerRegisterBinding.nombreUsuarioRegisterEditText.setText(vRPassword)
+            if(vRPassword =="") {
+                findNavController().navigate(CarerRegisterFragmentDirections.actionCarerRegisterFragmentToCarerLoginFragment())
+                carerRegisterBinding.repetirContrasenhaUsuarioRegisterTextInputLayout.error =
+                    null // Elimina el texto de error
+                carerRegisterBinding.repetirContrasenhaUsuarioRegisterTextInputLayout.isErrorEnabled =
+                    false // Desactiva el mensaje de error
+            }
+            else {
+                carerRegisterBinding.repetirContrasenhaUsuarioRegisterTextInputLayout.error = vRPassword
+                carerRegisterBinding.repetirContrasenhaUsuarioRegisterEditText.setText(" ")
+            }
         }
 
 
 
-        return view
+        carerRegisterViewModel.vRPassword.observe(viewLifecycleOwner, valRepPassword)
+
+        carerRegisterBinding.botonRegistrarseFragmentRegistro.setOnClickListener{
+
+            carerRegisterViewModel.validarContrasena(
+                carerRegisterBinding.contrasenhaUsuarioRegisterEditText.text.toString(),
+                carerRegisterBinding.repetirContrasenhaUsuarioRegisterEditText.text.toString(),
+                carerRegisterBinding.correoRegisterEditText.text.toString()
+
+            )
+
+        }
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        var test = carerRegisterBinding.contrasenhaUsuarioRegisterEditText.text.toString()
+        carerRegisterBinding.nombreUsuarioRegisterEditText.setText(test)
+    }
 
 }
+
