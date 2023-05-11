@@ -17,13 +17,11 @@ class CarerLoginViewModel: ViewModel() {
         MutableLiveData<String>()
     }
 
-
-
     //Declaración de funciones
 
     fun validarDatos(passwordLogin: String, emailLogin: String, passwordReg : String, emailReg: String):Boolean{
 
-        if(passwordLogin == passwordReg && emailLogin ==emailReg)
+        if(passwordLogin == passwordReg && emailLogin == emailReg)
             return true
         else {
             return false

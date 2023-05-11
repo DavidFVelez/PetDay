@@ -14,8 +14,8 @@
             android:id="@+id/action_carerLoginFragment_to_carerRegisterFragment"
             app:destination="@id/carerRegisterFragment" />
         <action
-            android:id="@+id/action_carerLoginFragment_to_inicioDuenoFragment"
-            app:destination="@id/inicioDuenoFragment" />
+            android:id="@+id/action_carerLoginFragment_to_bottomNavigationActivity"
+            app:destination="@id/bottomNavigationActivity" />
     </fragment>
     <fragment
         android:id="@+id/carerRegisterFragment"
@@ -26,9 +26,8 @@
             android:id="@+id/action_carerRegisterFragment_to_carerLoginFragment"
             app:destination="@id/carerLoginFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/inicioDuenoFragment"
-        android:name="com.davidvelez.petday.iu.fragments.InicioDuenoFragment"
-        android:label="fragment_inicio_dueno"
-        tools:layout="@layout/fragment_inicio_dueno" />
+    <activity
+        android:id="@+id/bottomNavigationActivity"
+        android:name="com.davidvelez.petday.iu.bottomnavigation.BottomNavigationActivity"
+        android:label="BottomNavigationActivity" />
 </navigation>
