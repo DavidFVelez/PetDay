@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.davidvelez.petday.R
 import com.davidvelez.petday.databinding.FragmentInicioCuidadorBinding
 
 class InicioCuidadorFragment : Fragment() {
@@ -18,7 +17,8 @@ class InicioCuidadorFragment : Fragment() {
         // Inflate the layout for this fragment
         inicioCuidadorFragmentBinding = FragmentInicioCuidadorBinding.inflate(inflater, container, false)
         val view = inicioCuidadorFragmentBinding.root
-
         return view
+
     }
+
 }

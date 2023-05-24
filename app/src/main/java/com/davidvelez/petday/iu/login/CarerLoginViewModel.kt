@@ -1,7 +1,7 @@
 package com.davidvelez.petday.iu.login
 
 
-import android.text.Editable
+
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
@@ -17,6 +17,7 @@ class CarerLoginViewModel: ViewModel() {
         MutableLiveData<String>()
     }
 
+
     //Declaración de funciones
 
     fun validarDatos(passwordLogin: String, emailLogin: String, passwordReg : String, emailReg: String):Boolean{
@@ -28,4 +29,6 @@ class CarerLoginViewModel: ViewModel() {
         }
 
     }
+
+
 }

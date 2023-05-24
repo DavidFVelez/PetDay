@@ -17,24 +17,22 @@
         android:id="@+id/titulo_registro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="16dp"
-        android:background="#8333E5"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:textAlignment="center"
-        android:textSize="23sp"
         android:layout_marginBottom="16dp"
-        android:text="@string/titulo_fragment_register" />
+        android:text="@string/titulo_fragment_register"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="23sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imagen_fragment_registro"
         android:layout_width="205dp"
         android:layout_height="205dp"
-
         android:layout_gravity="center"
-        android:src="@drawable/imagen_fragment_register" />
+        android:src="@drawable/iregistro" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/correo_register_text_input_layout"

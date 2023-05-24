@@ -17,7 +17,7 @@
     <string name="twitter">Twitter</string>
     <string name="facebook">Facebook</string>
     <string name="google">Google</string>
-    <string name="crear_cuenta">Si no tienes cuentas crea una Aquí</string>
+    <string name="crear_cuenta">Si no tienes cuentas crea una <u>Aquí</u> </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="titulo_fragment_register">Registro</string>

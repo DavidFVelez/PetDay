@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.davidvelez.petday.databinding.FragmentCarerRegisterBinding
@@ -12,7 +13,7 @@ import com.davidvelez.petday.databinding.FragmentCarerRegisterBinding
 class CarerRegisterFragment : Fragment() {
 
     companion object {
-        fun newInstance() = CarerRegisterFragment()
+
     }
     private lateinit var carerRegisterBinding: FragmentCarerRegisterBinding
     private lateinit var carerRegisterViewModel: CarerRegisterViewModel
@@ -53,8 +54,13 @@ class CarerRegisterFragment : Fragment() {
                     false // Desactiva el mensaje de error
             }
             else {
-                carerRegisterBinding.repetirContrasenhaUsuarioRegisterTextInputLayout.error = vRPassword
-                carerRegisterBinding.repetirContrasenhaUsuarioRegisterEditText.setText(" ")
+                if (vRPassword=="Las contraseñas no son iguales"){
+                    Toast.makeText(requireContext(), vRPassword, Toast.LENGTH_SHORT).show()
+                }else{
+                    Toast.makeText(requireContext(), vRPassword, Toast.LENGTH_SHORT).show()
+                }
+
+
 
             }
         }
@@ -65,7 +71,11 @@ class CarerRegisterFragment : Fragment() {
             carerRegisterViewModel.validarContrasena(
                 carerRegisterBinding.contrasenhaUsuarioRegisterEditText.text.toString(),
                 carerRegisterBinding.repetirContrasenhaUsuarioRegisterEditText.text.toString(),
-                carerRegisterBinding.correoRegisterEditText.text.toString())
+                carerRegisterBinding.correoRegisterEditText.text.toString(),
+                carerRegisterBinding.nombreUsuarioRegisterEditText.text.toString(),
+                carerRegisterBinding.telefonoUsuarioRegisterEditText.text.toString()
+
+            )
         }
     }
 

@@ -25,12 +25,12 @@
     <fragment
         android:id="@+id/perfilCuidadorFragment"
         android:name="com.davidvelez.petday.iu.fragments.PerfilCuidadorFragment"
-        android:label="fragment_perfil_cuidador"
+        android:label="Perfil"
         tools:layout="@layout/fragment_perfil_cuidador" />
     <fragment
         android:id="@+id/inicioCuidadorFragment"
         android:name="com.davidvelez.petday.iu.fragments.InicioCuidadorFragment"
-        android:label="fragment_inicio_cuidador"
+        android:label="Inicio"
         tools:layout="@layout/fragment_inicio_cuidador" >
         <action
             android:id="@+id/action_inicioCuidadorFragment_to_trabajosFragment"

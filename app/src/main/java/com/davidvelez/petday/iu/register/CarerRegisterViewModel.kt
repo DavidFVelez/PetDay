@@ -14,20 +14,31 @@ class CarerRegisterViewModel : ViewModel() {
         MutableLiveData<String>()
     }
 
-    fun validarContrasena(password: String, repPassword: String, email: String) {
+    fun validarContrasena(
+        password: String,
+        repPassword: String,
+        email: String,
+        name: String,
+        phone: String
+    ) {
+        if (password.isNotEmpty() && repPassword.isNotEmpty() && email.isNotEmpty() && name.isNotEmpty() && phone.isNotEmpty()){
 
-        if (password == repPassword) {
-            if (password.length >= 6) {
-                passwordReg.value = password
-                emailReg.value = email
-                vRPassword.value = ""
+            if (password == repPassword) {
+                if (password.length >= 6) {
+                    passwordReg.value = password
+                    emailReg.value = email
+                    vRPassword.value = ""
+                } else {
+                    vPassword.value = "Error. La contraseña debe ser de almenos 6 caracteres"
+                }
             } else {
-                vPassword.value = "Error. La contraseña debe ser de almenos 6 caracteres"
-            }
-        } else {
-            vRPassword.value = "Las contraseñas no son iguales"
+                vRPassword.value = "Las contraseñas no son iguales"
 
+            }
+        }else{
+            vRPassword.value = "Rellenar campos vacíos"
         }
+
     }
 
 }

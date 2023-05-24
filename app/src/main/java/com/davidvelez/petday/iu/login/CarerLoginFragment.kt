@@ -19,9 +19,11 @@ class CarerLoginFragment : Fragment() {
     private lateinit var carerRegisterViewModel: CarerRegisterViewModel
     private lateinit var carerLoginBinding: FragmentCarerLoginBinding
 
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         carerRegisterViewModel = ViewModelProvider(requireActivity()).get(CarerRegisterViewModel::class.java)
+
     }
 
     override fun onCreateView(
@@ -33,6 +35,7 @@ class CarerLoginFragment : Fragment() {
 
         carerLoginViewModel = ViewModelProvider(requireActivity())[CarerLoginViewModel::class.java]
         carerRegisterViewModel = ViewModelProvider(requireActivity())[CarerRegisterViewModel::class.java]
+
 
         val emailObserver = Observer<String> { lEmail ->
         }
@@ -64,7 +67,10 @@ class CarerLoginFragment : Fragment() {
                     carerRegisterViewModel.emailReg.value.toString()))
             {
 
-                findNavController().navigate(CarerLoginFragmentDirections.actionCarerLoginFragmentToBottomNavigationActivity())
+                    findNavController().navigate(CarerLoginFragmentDirections.actionCarerLoginFragmentToBottomNavigationActivity())
+                    activity?.finish()
+
+
             } else {
                 Toast.makeText(requireContext(), "Credenciales invalidos", Toast.LENGTH_SHORT).show()
             }
